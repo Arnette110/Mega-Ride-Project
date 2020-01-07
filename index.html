@@ -26,7 +26,7 @@
               </h2>
               <h3 class="score">
                   <div class="word-search">
-                    <input type="text" name="location" id="location" placeholder="Word Search" />
+                    <input type="text" name="location" id="word-search" placeholder="Word Search" />
                     <a class="button is-small" id="searchBtn"><i class="fas fa-search"></i></a>
                 </div>
                   
@@ -35,24 +35,17 @@
           </div>
         </section>
         <div class="container is-fluid">
-
-            <div class="card">
-
-                <div class="card-content">
-                    <div class="media">
-                        
-                        <div class="media-content">
-                            <p class="title is-4">Word:</p>
-                            
-                        </div>
-                    </div>
-
-                    <div class="content">
-                        <small>Definition goes here</small>
-                    </div>
-                    
-                    
+            <div class="tile is-ancestor">
+                <div class="tile is-vertical is-parent is-4">
+                    <ul id="word-list"></ul>
                 </div>
+                <div class="tile is parent">
+                    <section class="section">
+                        <div class="tile is-vertical" id="definition">
+                        </div>
+                    </section>
+                </div>
+            
             </div>
         </div>
 
@@ -72,7 +65,7 @@
         <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js"
             integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous">
         </script>
-        <script src="assets/js/script.js"></script>
+        <script src="assets/js/dictionary.js"></script>
         <script src="assets/js/soundcloud.js"></script>
     </body>
 
