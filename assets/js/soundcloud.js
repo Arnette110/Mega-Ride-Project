@@ -37,6 +37,10 @@ $(document).ready(function () {
     $("#comboBox").change(function () {
 
         songP = $(this).val();
+        if (songP === ""){
+            return false,
+            $("iframe").remove();
+        }
         var x = listSound.find(findUrl);
         searchParam = (x.url);
 
@@ -44,6 +48,7 @@ $(document).ready(function () {
         if ($("iframe").length) {
             $("iframe").remove();
         }
+        
 
         createWid();
     });
