@@ -59,9 +59,7 @@ function findUrl(song) {
 function createWid() {  
 
 
-  https://w.soundcloud.com/player/?url=https://soundcloud.com/fabricio-fuentes-302345651/sets/rock&auto_play=true&buying=false&liking=false&download=false&sharing=false&show_artwork=false&show_comments=false&show_playcount=false&show_user=false&hide_related=false&visual=false&start_track=0&callback=true
-
-$("#divSound").append(' <iframe id="sc-widget"  width="50%" height="166" scrolling="no" '+                              'frameborder="no" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/fabricio-fuentes-302345651/sets/rock&auto_play=true&buying=false&liking=false&download=false&sharing=false&show_artwork=false&show_comments=false&show_playcount=false&show_user=false&hide_related=false&visual=false&start_track=0&callback=true" ' +
+$("#divSound").append(' <iframe id="sc-widget"  width="50%" height="166" scrolling="no" '+ 'frameborder="no" src="https://w.soundcloud.com/player/?url='+searchParam+'&auto_play=true&buying=false&liking=false&download=false&sharing=false&show_artwork=false&show_comments=false&show_playcount=false&show_user=false&hide_related=false&visual=false&start_track=0&callback=true" ' +
 
 
 
