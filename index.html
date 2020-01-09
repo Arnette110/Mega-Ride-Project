@@ -9,29 +9,81 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .bg-img { 
+         background-image: url(assets/image/scrabble-background.jpg) ;
+         background-position: center center;
+         background-repeat:  no-repeat;
+         background-attachment: fixed;
+         background-size:  cover;
+         background-color: #999;
+ 
+  }
+ </style>
 </head>
 
 <body>
+
+
   <section class="hero">
     <div class="hero-body has-background-dark has-text-centered">
       <div class="container is-fluid">
+
+        
+
+
+    <h2 class="subtitle has-text-light">
+      <div><!-- main div-->
+
+          <div id="divSound">
+
+
+
+            
+                <!-- iframe tag here  -->
+
+
+ 
+          </div> 
+
+          <div id="divSelect">
+
+
+ 
+            
+            <!-- iframe tag here  -->
+
+
+
+      </div> 
+
+        </div><!-- main div-->
+  
+ <hr>
+
         <h1 class="title has-text-white">
           Scrabble Word Search
         </h1>
-        <h2 class="subtitle has-text-light">
 
-          <iframe id="sc-widget" width="50%" height="166" scrolling="no" frameborder="no"
-            src="https://w.soundcloud.com/player/?url=https://soundcloud.com/playlist/sets/chance-the-rapper-top-tracks&show_artwork=true"></iframe>
 
-        </h2>
-        <h3 class="score">
+
+        <!-- <h3 class="score"> -->
+
           <div class="word-search">
             <input type="text" name="location" id="word-search" placeholder="Word Search" />
             <a class="button is-small" id="searchBtn"><i class="fas fa-search"></i></a>
           </div>
+        <!-- </h3> -->
 
-        </h3>
       </div>
+
+      <div class="bg-img">
+
+      </div>
+    
+  
+
+
     </div>
   </section>
   <div class="container is-fluid">
