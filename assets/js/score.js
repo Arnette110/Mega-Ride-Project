@@ -42,7 +42,7 @@ cleanScoreBox();
         createId=findCharacter +index;
         console.log(createId)
 
-        $("#divLetters").append("<h2 id='"+createId +"'class= 'box'>"+findCharacter+"</h2>"); 
+        $("#divLetters").append("<h2 id='"+createId +"'class= 'box is-1 is-size-7'>"+findCharacter+"</h2>"); 
       //  $("#"+createId).css("display", "inline"); 
 
 //show the value by letter
