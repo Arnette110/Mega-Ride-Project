@@ -25,6 +25,7 @@ var songP; // for storage the cuurent value of select
 
 $(document).ready(function () {
 
+ 
     searchParam = (listSound[3].url)
     //create select html
     $("#divSelect").append('<select id="comboBox" > <option value=""></option>' + '<option value="Electrify">Electrify</option>' +
@@ -57,6 +58,7 @@ $(document).ready(function () {
 
 function findUrl(song) {
     return song.option === songP;
+ 
 }
 
 
