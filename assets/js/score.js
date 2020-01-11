@@ -10,9 +10,17 @@ var scoreByLetter;
 var TotalScore;
 
 
+function cleanScoreBox() {
+    
+    $("#divLetters").empty();  
+    $("#divScore").empty();
+}
+
+
 function getWord() {
 
-  //$("#divPoints").empty();
+cleanScoreBox();
+
     wordSearched= $('#word-search').val();
     wordSearched =wordSearched.split("");
   //  console.log(wordSearched)
@@ -35,7 +43,7 @@ function getWord() {
         console.log(createId)
 
         $("#divLetters").append("<h2 id='"+createId +"'class= 'box'>"+findCharacter+"</h2>"); 
-        $("#"+createId).css("display", "inline"); 
+      //  $("#"+createId).css("display", "inline"); 
 
 //show the value by letter
 
