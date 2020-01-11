@@ -9,25 +9,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
   <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    .bg-img { 
-         background-image: url(assets/image/scrabble-background.jpg) ;
-         background-position: center center;
-         background-repeat:  no-repeat;
-         background-attachment: fixed;
-         background-size:  cover;
-         background-color: #999;
- 
-  }
- </style>
 </head>
 
 <body>
-
-
   <section class="hero">
     <div class="hero-body has-background-dark has-text-centered">
       <div class="container is-fluid">
+        <div>
+          <!-- main div-->
+          <h1 class="title has-text-white">Select A Music Genre</h1>
+          <div id="divSound">
+            <!-- iframe tag here  -->
+          </div>
+
 
         
 
@@ -43,34 +37,27 @@
             <!-- select tag here  -->
       </div> 
 
+
         </div><!-- main div-->
-  
- <hr>
+
+        <hr>
 
         <h1 class="title has-text-white">
           Scrabble Word Search
         </h1>
-
-
-
-        <!-- <h3 class="score"> -->
-
-          <div class="word-search">
-            <input type="text" name="location" id="word-search" placeholder="Word Search" />
-            <a class="button is-small" id="searchBtn"><i class="fas fa-search"></i></a>
-          </div>
-        <!-- </h3> -->
-
-      </div>
-
-      <div class="bg-img">
-
+        <div class="word-search">
+          <input type="text" name="location" id="word-search" placeholder="Word Search" />
+          <a class="button is-small" id="searchBtn"><i class="fas fa-search"></i></a>
+        </div>
+       
       </div>
     </div>
   </section>
 
 
+
   <!-- other line with box tile -->
+
   <div class="container is-fluid">
 
     <div class="tile is-ancestor">
@@ -116,10 +103,6 @@
           </div>
         </section>
       </div>
-
-
-
-
 
     </div>
   </div>
