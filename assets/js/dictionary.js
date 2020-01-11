@@ -55,6 +55,7 @@ function wordSearch() {
             $("#definition").append(def)
         };
         console.log(responseWord)
+        $("#definition").addClass("box")
         $("#definition").prepend(word)
         words.push(responseWord)
         localStorage.setItem("words", JSON.stringify(words));
