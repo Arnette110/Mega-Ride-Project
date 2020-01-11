@@ -1,44 +1,64 @@
 //value of letter
-var scoreTable =[
+var scoreTable ={"a":1, "b":3, "c":3, "d":2, "e":1, "f":4, "g":2, "h":4, "i":1, "j":8, "k":5, "l":1, "m":3, "n":1, "o":1, "p":3, "q":10, "r":1, "s":1, "t":1, "u":1, "v":4, "w":4, "x":8, "y":4, "z":10};
 
-    { point: 1,  letter:"A, E, I, O, U, L, N, S, T, R"}, 
-    { point: 2,  letter:"D,G"},  
-    { point: 3,  letter:"B, C, M, P"},
-    { point: 4,  letter:"F, H, V, W, Y"},
-    { point: 5,  letter:"K"},      
-    { point: 8,  letter:"J, X"},   
-    { point: 10, letter:"Q, Z"}
 
-];
-
+ 
 var wordSearched;
+var eachCharacter;
+var findCharacter;
+var scoreByLetter;
+
+
+function getWord() {
+
+    wordSearched=    $('#word-search').val();
+    wordSearched =wordSearched.split("");
+    console.log(wordSearched)
+
+
+    for (let index = 0; index < wordSearched.length; index++) {
+        findCharacter = wordSearched[index];
+
+       alert( scoreTable[findCharacter]);
+
+
+        
+
+       
+    //    var x = scoreTable.find(findPoint);
+    //    alert(x)
+
+    //     scoreByLetter= (x.point);
 
 
 
-function getWord(params) {
 
-    // wordSearched=  "this is a string"//  $('#word-search').val();
-    // wordSearched.split("");
-    // console.log(wordSearched)
+        var x = scoreTable.find(findUrl);
+        var searchParam= (x.point);
+        alert(searchParam)
 
-    var str = $('#word-search').val();
-    var res = str.split("");
-    console.log("myfunction");
-    console.log(res)
-   
+
+      //  findPoint();
+      
+        console.log(eachCharacter);
+        console.log(scoreByLetter);    
+    
+    }   
 }
 
+// function findPoint(pPoint) { //get the value in the array (point)
+//     return pPoint.point === findCharacter; 
+//   }
 
- $(document).ready(function () {
+  function findUrl(song) { 
+      alert("alert for inside is "+findCharacter)
+    return song.point === "q"; 
+  }
 
-    getWord();
-   
-});
+
 
 $("#searchBtn").on("click", function (event) {
-    
-    getWord();
-    
+        getWord();    
 });
 
 
@@ -49,6 +69,9 @@ $("#word-search").on("keypress", function (e) {
     };
     
 });
+
+
+
 
 
 

@@ -34,6 +34,9 @@ $(document).ready(function () {
   $("#comboBox").change(function(){      
 
     songP=$(this).val();
+
+
+
     var x = listSound.find(findUrl);
     searchParam= (x.url);
 
@@ -44,13 +47,11 @@ $(document).ready(function () {
    
      createWid();
   });
-                         
- 
+                  });//ready
 
 
-});//ready
 
-
+                  
 function findUrl(song) { 
   return song.option === songP; 
 }

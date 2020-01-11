@@ -95,3 +95,6 @@ function init() {
 function clear() {
     $("#definition").empty();
 };
+
+
+
