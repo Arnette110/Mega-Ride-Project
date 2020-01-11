@@ -4,58 +4,60 @@ var scoreTable ={"a":1, "b":3, "c":3, "d":2, "e":1, "f":4, "g":2, "h":4, "i":1, 
 
  
 var wordSearched;
-var eachCharacter;
+//var eachCharacter;
 var findCharacter;
 var scoreByLetter;
+var TotalScore;
 
 
 function getWord() {
 
-    wordSearched=    $('#word-search').val();
+  //$("#divPoints").empty();
+    wordSearched= $('#word-search').val();
     wordSearched =wordSearched.split("");
-    console.log(wordSearched)
-
+  //  console.log(wordSearched)
+   
+    TotalScore=0;
 
     for (let index = 0; index < wordSearched.length; index++) {
-        findCharacter = wordSearched[index];
-
-       alert( scoreTable[findCharacter]);
-
+      
+        findCharacter = wordSearched[index];//show the letter
 
         
-
-       
-    //    var x = scoreTable.find(findPoint);
-    //    alert(x)
-
-    //     scoreByLetter= (x.point);
+        scoreByLetter = scoreTable[findCharacter];
+        console.log(wordSearched[index])
+        TotalScore=TotalScore+ scoreByLetter;
 
 
+//show the letter
+        var createId="";
+        createId=findCharacter +index;
+        console.log(createId)
 
+        $("#divLetters").append("<h2 id='"+createId +"'class= 'box'>"+findCharacter+"</h2>"); 
+        $("#"+createId).css("display", "inline"); 
 
-        var x = scoreTable.find(findUrl);
-        var searchParam= (x.point);
-        alert(searchParam)
+//show the value by letter
 
+        createId=scoreTable[findCharacter] +index;
+        $("#divLetters").append("<h2 id='"+createId+"'> <sub>"+scoreTable[findCharacter]+" </sub></h2>");
+        //$("#"+createId).css("background-color", "red");
 
-      //  findPoint();
-      
-        console.log(eachCharacter);
-        console.log(scoreByLetter);    
-    
-    }   
+     
+    }   //for loop
+
+//show the score get for the word
+    $("#divScore").append("<h2 id='scoreT' class= ' tile is-child '>  Score by word is: "+TotalScore+"</h3>");
+    $("#scoreT").css("display", "inline"); 
 }
+ 
+// function cleanBoxScore() {
+//     $("#divScore").empty();    
+//     $("#divLetters").empty();
+//     $("#divPoints").empty();   
 
-// function findPoint(pPoint) { //get the value in the array (point)
-//     return pPoint.point === findCharacter; 
-//   }
-
-  function findUrl(song) { 
-      alert("alert for inside is "+findCharacter)
-    return song.point === "q"; 
-  }
-
-
+    
+// }
 
 $("#searchBtn").on("click", function (event) {
         getWord();    
