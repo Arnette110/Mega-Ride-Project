@@ -1,0 +1,22 @@
+body {
+    width: auto;
+    height: auto;
+    display: block;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    background-image: url('/assets/image/scrabble-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #999;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+
+}

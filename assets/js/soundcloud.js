@@ -21,19 +21,19 @@ var listSound = [{
 
 ];
 
-var songP; // for storage the cuurent value of select
+var songP; // for storage the current value of select
 
 $(document).ready(function () {
 
  
     searchParam = (listSound[3].url)
     //create select html
-    $("#divSelect").append('<select id="comboBox" > <option value=""></option>' + '<option value="Electrify">Electrify</option>' +
+    $("#divSelect").append('<div class="select "> <select id="comboBox"> <option value=""></option>' + '<option value="Electrify">Electrify</option>' +
         '<option value="Hip-hop">Hip-hop</option> ' +
         '<option value="90-Music">90-Music</option>' +
         '<option value="Ariana-Grande">Ariana-Grande</option>' +
         '<option value="Rock">Rock</option>' +
-        '</select>');
+        '</select></div>');
 
     $("#comboBox").change(function () {
 
@@ -45,7 +45,7 @@ $(document).ready(function () {
         var x = listSound.find(findUrl);
         searchParam = (x.url);
 
-        // check if is create the element iframe
+        // check if iframe is already created
         if ($("iframe").length) {
             $("iframe").remove();
         }
@@ -63,5 +63,5 @@ function findUrl(song) {
 
 
 function createWid() {
-    $("#divSound").append(' <iframe id="sc-widget"  width="50%" height="166" scrolling="no" ' + 'frameborder="no" src="https://w.soundcloud.com/player/?url=' + searchParam + '&auto_play=false&buying=false&liking=false&download=false&sharing=false&show_artwork=false&show_comments=false&show_playcount=false&show_user=false&hide_related=false&visual=false&start_track=0&callback=true" ' + '</iframe> ');
+    $("#divSound").append(' <iframe id="sc-widget"  width="50%" height="100" scrolling="no" ' + 'frameborder="no" src="https://w.soundcloud.com/player/?url=' + searchParam + '&auto_play=false&buying=false&liking=false&download=false&sharing=false&show_artwork=false&show_comments=false&show_playcount=false&show_user=false&hide_related=false&visual=false&start_track=0&callback=true" ' + '</iframe> ');
 } //createWid
