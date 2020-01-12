@@ -49,7 +49,7 @@ function getWord() {
     
     wordSearched = $('#wordSearch').val();
     wordSearched = wordSearched.split("");
-     console.log(btnSearched)
+    
 
     TotalScore = 0;
 
