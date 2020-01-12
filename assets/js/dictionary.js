@@ -1,22 +1,16 @@
-// -- searchBtn onclick event --
-$("#searchBtn").on("click", function (event) {
-    clear();
-    wordSearch();
-
-
-});
 
 // -- search on keypress of "enter" event --
-$("#word-search").on("keypress", function (e) {
+$("#wordSearch").on("keypress", function (e) {
     if (e.which === 13) {
         clear();
         wordSearch();
+        getWord();
 
     };
 
 });
 
-var wordListEl = $("#word-list");
+var wordListEl = $("#wordList");
 var words = [];
 
 
@@ -26,7 +20,7 @@ init();
 function wordSearch() {
 
     var APIKey = "df02e1fe-49cf-4a55-98fc-de7865e40463";
-    var searchParam = $("#word-search").val().trim();
+    var searchParam = $("#wordSearch").val().trim();
     if (searchParam === "") {
         return;
     };
@@ -50,24 +44,25 @@ function wordSearch() {
             console.log(wordDef);
 
 
-            var word = $("<h1 class= 'title'> " + responseWord + " : " + "</h1>");
-            var def = $("<h2 class='subtitle'> " + wordDef + "</h2>")
+            var word = $("<h1 class= 'title'> " + responseWord + "</h1>");
+            var def = $("<hr>" + "<h2 class='subtitle'> " + wordDef + "</h2>")
             $("#definition").append(def)
         };
         console.log(responseWord)
-        $("#definition").addClass("box")
-        $("#definition").prepend(word)
-        words.push(responseWord)
+        $("#definition").addClass("box");
+        $("#definition").prepend(word);
+        words.push(responseWord);
         localStorage.setItem("words", JSON.stringify(words));
-        $("#word-search").val("");
+        $("#wordSearch").val("");
         init();
     });
     // -- ajax call for dictionary end --
 };
 
-$("#word-list").on("click", "button", function (event) {
+$("#wordList").on("click", "button", function (event) {
     event.preventDefault();
     clear();
+    getWord();
 
     var btnVal = $(this).text();
     var APIKey = "df02e1fe-49cf-4a55-98fc-de7865e40463";
@@ -91,11 +86,12 @@ $("#word-list").on("click", "button", function (event) {
             console.log(wordDef);
 
 
-            var word = $("<h1 class= 'title'> " + responseWord + " : " + "</h1>");
+            var word = $("<h1 class='title'> " + responseWord  + "</h1>");
             var def = $("<h2 class='subtitle'> " + wordDef + "</h2>")
             $("#definition").append(def)
         };
-        $("#definition").prepend(word)
+        $("#definition").addClass("box");
+        $("#definition").prepend(word);
     });
 });
 
@@ -110,16 +106,16 @@ function renderWords() {
         var button = $("<button>");
         button.text(wordLS);
         button.attr("data-index", i);
-        button.addClass("button is-link is-fullwidth is-outlined box")
+        button.addClass("button has-background-dark has-text-white is-fullwidth box")
         li.append(button);
-        $("#word-list").prepend(li);
-        $("#word-list").prepend("<br>");
+        $("#wordList").prepend(li);
+        $("#wordList").prepend("<br>");
     }
 };
 
 // -- function to retrieve city names from localStorage --
 function init() {
-    $("#word-list").empty();
+    $("#wordList").empty();
     var storedWords = JSON.parse(localStorage.getItem("words"));
     if (storedWords !== null) {
         words = storedWords;
