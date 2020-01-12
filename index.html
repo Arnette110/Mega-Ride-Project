@@ -12,87 +12,70 @@
 </head>
 
 <body>
-  <section class="hero">
-    <div class="hero-body has-background-dark has-text-centered">
-      <div class="container is-fluid">
-        <div>
-          <!-- main div-->
-          <h1 class="title has-text-white">Select A Music Genre</h1>
-          <div id="divSound">
-            <!-- iframe tag here  -->
+  <!-- hero container start -->
+
+  <div class="hero-body has-bg-img has-text-centered">
+    <div class="container is-fluid">
+      <div class="columns">
+        <!-- word search div start -->
+        <div class="column">
+          <h1 class="title">
+            Scrabble Word Search
+          </h1>
+          <!-- word search input box and search button -->
+          <div class="word-search">
+            <div class="field">
+              <div class="control has-icons-right">
+                <input class="input" type="text" name="location" id="wordSearch" placeholder="Word Search">
+                <span class="icon is-right">
+                  <i class="fas fa-search"></i>
+                </span>
+              </div>
+            </div>
           </div>
-
-
-        
-
-
-    <h2 class="subtitle has-text-light">
-      <div><!-- main div-->
-
-          <div id="divSound">            
-            <!-- iframe tag here  --> 
-          </div> 
-
-          <div id="divSelect">            
-            <!-- select tag here  -->
-      </div> 
-
-
-        </div><!-- main div-->
-
-        <hr>
-
-        <h1 class="title has-text-white">
-          Scrabble Word Search
-        </h1>
-        <div class="word-search">
-          <input type="text" name="location" id="word-search" placeholder="Word Search" />
-          <a class="button is-small" id="searchBtn"><i class="fas fa-search"></i></a>
+          <!-- word search div end -->
         </div>
-       
+        <!-- song select div start-->
+        <div class="column">
+          <h1 class="title">Select A Music Genre</h1>
+          <div>
+            <div id="divSound">
+              <!-- iframe tag here  -->
+            </div>
+            <div id="divSelect">
+              <!-- select tag here  -->
+            </div>
+          </div>
+        </div>
+        <!-- song select div end -->
       </div>
     </div>
-  </section>
+  </div>
+  <!-- hero container end -->
 
 
 
   <!-- other line with box tile -->
 
   <div class="container is-fluid">
-
     <div class="tile is-ancestor">
-
-      <div class="tile is-vertical is-parent is-4">      
-        <ul id="word-list"></ul>
-        <!-- ul here --> 
-      </div>
-
-      <div class="tile is-parent">
-        <section class="section">
-          <div class="tile is-vertical" id="definition">
-            <!-- definition here --> 
-          </div>
-        </section>
-      </div>
-
-
-      <div class="tile is-parent">
-
-        <section class="section">
+      <div class="tile is-vertical is-12">
+        <div class="tile">
           
-          <!-- <div class="tile  " id="divPoints"> -->
-
-            <div class='tile box ' id='divLetters'></div>
-
-            <div class='tile box' id='divScore'></div>
-
-
-            <!-- score goes here --> 
-          <!-- </div>end divpoints -->
-
-        </section>
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child" id="definition">
+              </article>
+              <div class='tile' id='divScore'></div>
+            </div>
+          </div>
+          <div class="tile is-parent is-3">
+            <article class="tile is-child">
+              <ul id="wordList"></ul>
+            </article>
+          </div>
+        </div>
       </div>
-
     </div>
   </div>
 
@@ -101,7 +84,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Powered by Us. </strong> 
+        <strong>Powered by Us. </strong>
       </p>
     </div>
   </footer>
@@ -111,12 +94,7 @@
 
 
   <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
-
-
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-
   <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js"
     integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous">
   </script>
