@@ -12,10 +12,17 @@ $("#wordSearch").on("keypress", function (e) {
 
 var wordListEl = $("#wordList");
 var words = [];
+var text;
+var responseWord;
 
 
 
 init();
+
+
+
+
+
 
 function wordSearch() {
 
@@ -36,7 +43,7 @@ function wordSearch() {
     }).then(function (response) {
 
         console.log(response)
-        var responseWord = response[0].hwi.hw;
+        responseWord = response[0].hwi.hw;
 
         // -- building current weather card start --
         for (i = 0; i < response[0].shortdef.length; i++) {
@@ -49,8 +56,20 @@ function wordSearch() {
             $("#definition").append(def)
         };
         console.log(responseWord)
+
         $("#definition").addClass("box");
         $("#definition").prepend(word);
+
+// erase * chracter
+        responseWord=responseWord.replace("*","");       
+        text = responseWord.indexOf("*");   
+         
+        while (text!="-1") {
+            responseWord=responseWord.replace("*","");
+            text = responseWord.indexOf("*"); 
+        }
+
+
         words.push(responseWord);
         localStorage.setItem("words", JSON.stringify(words));
         $("#wordSearch").val("");
@@ -59,12 +78,19 @@ function wordSearch() {
     // -- ajax call for dictionary end --
 };
 
+ 
+ 
+
+
+//history
 $("#wordList").on("click", "button", function (event) {
     event.preventDefault();
+
     clear();
     getWord();
 
     var btnVal = $(this).text();
+    $("#wordSearch").val(btnVal);
     var APIKey = "df02e1fe-49cf-4a55-98fc-de7865e40463";
 
     // -- URL to query database -- 
@@ -80,7 +106,7 @@ $("#wordList").on("click", "button", function (event) {
         console.log(response)
         var responseWord = response[0].hwi.hw;
 
-        // -- building current weather card start --
+        // -- building current  card start --
         for (i = 0; i < response[0].shortdef.length; i++) {
             var wordDef = response[0].shortdef[i];
             console.log(wordDef);
@@ -94,6 +120,7 @@ $("#wordList").on("click", "button", function (event) {
         $("#definition").prepend(word);
     });
 });
+
 
 function renderWords() {
     if (words.length > 5) {
