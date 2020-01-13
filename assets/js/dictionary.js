@@ -90,10 +90,12 @@ $("#wordList").on("click", "button", function (event) {
     getWord();
 
     var btnVal = $(this).text();
-    $("#wordSearch").val(btnVal);
+
+    $("#wordSearch").val(btnVal);//search   tag
+
     var APIKey = "df02e1fe-49cf-4a55-98fc-de7865e40463";
 
-    // -- URL to query database -- 
+    // -- URL to query database -- -
     var queryURL =
         "https://www.dictionaryapi.com/api/v3/references/collegiate/json/" + btnVal + "?key=" + APIKey;
 
