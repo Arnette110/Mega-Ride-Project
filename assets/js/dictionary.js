@@ -1,7 +1,19 @@
 
+
+$('#wordSearch').bind('keypress', function(e) {
+    var keyCode = (e.which) ? e.which : event.keyCode
+    return !(  (keyCode < 97 || keyCode > 122));
+  });
+
+
+
+
 // -- search on keypress of "enter" event --
 $("#wordSearch").on("keypress", function (e) {
+
+ 
     if (e.which === 13) {
+    
         clear();
         wordSearch();
         getWord();
