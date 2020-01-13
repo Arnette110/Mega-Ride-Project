@@ -1,5 +1,5 @@
 
-
+//validate input for just a-z character
 $('#wordSearch').bind('keypress', function(e) {
     var keyCode = (e.which) ? e.which : event.keyCode
     return !(  (keyCode < 97 || keyCode > 122));
@@ -9,15 +9,12 @@ $('#wordSearch').bind('keypress', function(e) {
 
 
 // -- search on keypress of "enter" event --
-$("#wordSearch").on("keypress", function (e) {
+$("#wordSearch").on("keypress", function (e) { 
 
- 
-    if (e.which === 13) {
-    
+    if (e.which === 13) {    
         clear();
         wordSearch();
         getWord();
-
     };
 
 });
@@ -27,14 +24,7 @@ var words = [];
 var text;
 var responseWord;
 
-
-
 init();
-
-
-
-
-
 
 function wordSearch() {
 
@@ -72,7 +62,7 @@ function wordSearch() {
         $("#definition").addClass("box");
         $("#definition").prepend(word);
 
-// erase * chracter
+        // erase * chracter
         responseWord=responseWord.replace("*","");       
         text = responseWord.indexOf("*");   
          
@@ -99,11 +89,12 @@ $("#wordList").on("click", "button", function (event) {
     event.preventDefault();
 
     clear();
-    getWord();
+    
 
     var btnVal = $(this).text();
 
     $("#wordSearch").val(btnVal);//search   tag
+    getWord();
 
     var APIKey = "df02e1fe-49cf-4a55-98fc-de7865e40463";
 
@@ -126,9 +117,16 @@ $("#wordList").on("click", "button", function (event) {
             console.log(wordDef);
 
 
-            var word = $("<h1 class='title'> " + responseWord  + "</h1>");
-            var def = $("<h2 class='subtitle'> " + wordDef + "</h2>")
+            // var word = $("<h1 class='title'> " + responseWord  + "</h1>");
+            // var def = $("<h2 class='subtitle'> " + wordDef + "</h2>")
+            // $("#definition").append(def)
+
+
+            var word = $("<h1 class= 'title'> " + responseWord + "</h1>");
+            var def = $("<hr>" + "<h2 class='subtitle'> " + wordDef + "</h2>")
             $("#definition").append(def)
+
+
         };
         $("#definition").addClass("box");
         $("#definition").prepend(word);
@@ -167,6 +165,4 @@ function init() {
 function clear() {
     $("#definition").empty();
 };
-
-
 
