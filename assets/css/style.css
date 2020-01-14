@@ -7,7 +7,7 @@ body {
 
 body::after {
     content: "";
-    background-image: url('/assets/image/scrabble-background.jpg');
+    background-image: url('../image/scrabble-background.jpg');
     background-size: cover;
     background-position: center;
     background-color: #999;
