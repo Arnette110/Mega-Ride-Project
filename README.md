@@ -24,11 +24,9 @@
 - To log your score you can enter your score value into the input box under the heading "Score Keeper" and click the button relevant to the player you are to keep track of your score.
 
 
-
-
 ## Screenshots of project
-
-
+![landing](https://user-images.githubusercontent.com/54122844/72304033-8b321e80-362c-11ea-9042-61ee296e7fe5.png)
+![definition-soundcloud](https://user-images.githubusercontent.com/54122844/72304030-88cfc480-362c-11ea-9c6c-9b8747b8972d.png)
 
 
 ## Built With
