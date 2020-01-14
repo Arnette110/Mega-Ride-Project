@@ -11,6 +11,7 @@
 - Kevin Peguero
 
 ## URL to project
+https://arnette110.github.io/Scrabble-Party-App/
 
 
 ## Instructions
