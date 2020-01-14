@@ -26,7 +26,7 @@
           <div class="word-search">
             <div class="field">
               <div class="control has-icons-right">
-                <input class="input" type="text" name="location" id="wordSearch" placeholder="Word Search"   >
+                <input class="input" type="text" name="location" id="wordSearch" placeholder="Word Search">
                 <span class="icon is-right">
                   <i class="fas fa-search"></i>
                 </span>
@@ -47,6 +47,33 @@
             </div>
           </div>
         </div>
+        <div class="column">
+          <h1 class="title">Score Keeper</h1>
+          <h2 class="subtitle"><span id="p1Display">0</span> to <span id="p2Display">0</span></h2>
+          <div class="field">
+            <div class="control has-icons-right">
+              <input class="input" id="scoreInput" type="number" placeholder="Input Score Here!">
+            </div>
+          </div>
+          <div class="field is-grouped">
+            <p class="control">
+              <a class="button has-background-dark has-text-white is-fullwidth" id="p1">
+                Player One
+              </a>
+            </p>
+            <p class="control">
+              <a class="button has-background-dark has-text-white is-fullwidth" id="p2">
+                Player Two
+              </a>
+            </p>
+            <p class="control">
+              <a class="button has-background-dark has-text-white is-fullwidth" id="reset">
+                Reset
+              </a>
+            </p>
+          </div>
+          
+        </div>
         <!-- song select div end -->
       </div>
     </div>
@@ -61,7 +88,7 @@
     <div class="tile is-ancestor">
       <div class="tile is-vertical is-12">
         <div class="tile">
-          
+
           <div class="tile">
             <div class="tile is-parent is-vertical">
               <article class="tile is-child" id="definition">

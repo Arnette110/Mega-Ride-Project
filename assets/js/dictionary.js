@@ -130,6 +130,7 @@ $("#wordList").on("click", "button", function (event) {
         };
         $("#definition").addClass("box");
         $("#definition").prepend(word);
+        $("#wordSearch").val("");
     });
 });
 
